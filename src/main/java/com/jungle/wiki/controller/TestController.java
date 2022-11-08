@@ -1,9 +1,7 @@
 package com.jungle.wiki.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 测试 
@@ -23,9 +21,17 @@ public class TestController {
      * DELETE 删除请求
      * // @RequestMapping("/hello") 接受所有请求
      * */
-    @RequestMapping("/hello")
+    @GetMapping("/hello")
     public String hello() {
         return "hello world!";
+    }
+
+    /**
+     * 参数名字一样, 直接映射
+     * */
+    @PostMapping("/hello/post")
+    public String helloPost(String name) {
+        return "Hello World! Post，" + name;
     }
 
 }

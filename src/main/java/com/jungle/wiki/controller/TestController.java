@@ -1,5 +1,6 @@
 package com.jungle.wiki.controller;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,9 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class TestController {
 
+    @Value("${test.hello:TEST}")
+    private String testHello;
+
     /**
      * GET, 查询请求 /user?id=1 ==> /user/1
      * POST, 新增请求
@@ -23,7 +27,7 @@ public class TestController {
      * */
     @GetMapping("/hello")
     public String hello() {
-        return "hello world!";
+        return "hello world!" + testHello;
     }
 
     /**

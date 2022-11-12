@@ -3,8 +3,9 @@ package com.jungle.wiki.controller;
 import com.jungle.wiki.entity.Test;
 import com.jungle.wiki.service.TestService;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import java.util.List;

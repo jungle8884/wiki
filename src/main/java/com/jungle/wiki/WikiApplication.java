@@ -6,13 +6,18 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
 
+/**
+ * @author Jungle
+ */
 @SpringBootApplication
 public class WikiApplication {
 
 	private static final Logger LOG = LoggerFactory.getLogger(WikiApplication.class);
 
 	public static void main(String[] args) {
-		// SpringApplication.run(WikiApplication.class, args);
+		/* 初始代码
+		 * SpringApplication.run(WikiApplication.class, args);
+		 * */
 		SpringApplication app = new SpringApplication(WikiApplication.class);
 		Environment env = app.run(args).getEnvironment();
 		LOG.info("启动成功！！");

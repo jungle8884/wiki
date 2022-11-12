@@ -1,8 +1,13 @@
 package com.jungle.wiki.controller;
 
+import com.jungle.wiki.entity.Test;
+import com.jungle.wiki.service.TestService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 测试 
@@ -17,6 +22,9 @@ public class TestController {
 
     @Value("${test.hello:TEST}")
     private String testHello;
+
+    @Resource
+    private TestService testService;
 
     /**
      * GET, 查询请求 /user?id=1 ==> /user/1
@@ -38,4 +46,9 @@ public class TestController {
         return "Hello World! Post，" + name;
     }
 
+
+    @GetMapping("test/list")
+    public List<Test> list() {
+        return testService.getList();
+    }
 }

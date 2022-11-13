@@ -28,3 +28,9 @@ npm install ant-design-vue@next --save
 npm install ant-design-vue@2.0.0-rc.3 --save
 # 文件回退: 选中文件 --> 鼠标右键 --> revert
 
+###
+# 4-6 将布局放到App.vue, 将各页面变化的部分放到各自路由页面
+# 页面不一致如何解决: npm install ant-design-vue@next --save
+# 解决没有搜索框: <a-layout-header id="components-layout-demo-top-side-2" class="header"> 
+# 加 id: id="components-layout-demo-top-side-2"
+

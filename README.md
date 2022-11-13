@@ -21,3 +21,10 @@ vue create web
 
 
 ###
+# 4-5 集成Ant Design Vue
+# @nex: 安装最新的未正式发布版本
+npm install ant-design-vue@next --save
+# 版本保持一致
+npm install ant-design-vue@2.0.0-rc.3 --save
+# 文件回退: 选中文件 --> 鼠标右键 --> revert
+

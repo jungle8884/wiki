@@ -1,6 +1,7 @@
 package com.jungle.wiki.controller;
 
 import com.jungle.wiki.entity.Ebook;
+import com.jungle.wiki.resp.CommonResp;
 import com.jungle.wiki.service.EbookService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,8 +20,11 @@ public class EbookController {
 
 
     @GetMapping("/list")
-    public List<Ebook> list() {
-        return ebookService.getList();
+    public CommonResp<List<Ebook>> list() {
+        CommonResp<List<Ebook>> resp = new CommonResp<>();
+        List<Ebook> list = ebookService.getList();
+        resp.setContent(list);
+        return resp;
     }
 
 }

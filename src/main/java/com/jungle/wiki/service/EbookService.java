@@ -5,11 +5,10 @@ import com.jungle.wiki.entity.EbookExample;
 import com.jungle.wiki.mapper.EbookMapper;
 import com.jungle.wiki.req.EbookReq;
 import com.jungle.wiki.resp.EbookResp;
-import org.springframework.beans.BeanUtils;
+import com.jungle.wiki.util.CopyUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -29,20 +28,25 @@ public class EbookService {
         EbookExample.Criteria criteria = ebookExample.createCriteria();
         criteria.andNameLike("%" + req.getName() + "%");
         List<Ebook> ebooksList = ebookMapper.selectByExample(ebookExample);
-        List<EbookResp> ebookRespList = covertEntity(ebooksList);
+        return clazzConverter(ebooksList);
 
-        return ebookRespList;
     }
 
-    private List<EbookResp> covertEntity(List<Ebook> ebooksList) {
-        List<EbookResp> res = new ArrayList<>();
-        for (Ebook ebook : ebooksList) {
-            EbookResp ebookResp = new EbookResp();
-            BeanUtils.copyProperties(ebook, ebookResp);
-            res.add(ebookResp);
-        }
-
-        return res;
+    /**
+     * 类转换器
+     * */
+    private List<EbookResp> clazzConverter(List<Ebook> ebooksList) {
+         /*List<EbookResp> res = new ArrayList<>();
+         for (Ebook ebook : ebooksList) {
+             //EbookResp ebookResp = new EbookResp();
+             //BeanUtils.copyProperties(ebook, ebookResp);
+             // 对象复制
+             EbookResp ebookResp = CopyUtil.copy(ebook, EbookResp.class);
+             res.add(ebookResp);
+         }
+         return res;*/
+        // 列表复制
+        return CopyUtil.copyList(ebooksList, EbookResp.class);
     }
 
 

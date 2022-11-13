@@ -34,3 +34,6 @@ npm install ant-design-vue@2.0.0-rc.3 --save
 # 解决没有搜索框: <a-layout-header id="components-layout-demo-top-side-2" class="header"> 
 # 加 id: id="components-layout-demo-top-side-2"
 
+###
+# 4-7 勾选 Amend commit 追加到上一次提交
+

@@ -2,9 +2,12 @@ package com.jungle.wiki.mapper;
 
 import com.jungle.wiki.entity.Ebook;
 import com.jungle.wiki.entity.EbookExample;
-import java.util.List;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
+@Mapper
 public interface EbookMapper {
     long countByExample(EbookExample example);
 

@@ -1,7 +1,7 @@
 <template>
     <a-layout>
 
-        <a-layout-sider width="200" style="background: #fff">
+      <a-layout-sider width="200" style="background: #fff">
             <a-menu
               mode="inline"
               v-model:selectedKeys="selectedKeys2"
@@ -55,15 +55,3 @@
 
     </a-layout>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue';
-import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
-
-export default defineComponent({
-  name: 'Home',
-  components: {
-    HelloWorld,
-  },
-});
-</script>

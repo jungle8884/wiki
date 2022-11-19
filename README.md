@@ -37,3 +37,7 @@ npm install ant-design-vue@2.0.0-rc.3 --save
 ###
 # 4-7 勾选 Amend commit 追加到上一次提交
 
+### 
+# 5-2 集成HTTP库Axios
+npm install axios@0.21.0 --save
+

@@ -1,5 +1,8 @@
 package com.jungle.wiki.entity;
 
+import lombok.Data;
+
+@Data
 public class Ebook {
     private Long id;
 

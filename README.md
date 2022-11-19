@@ -30,9 +30,9 @@ npm install ant-design-vue@2.0.0-rc.3 --save
 
 ###
 # 4-6 将布局放到App.vue, 将各页面变化的部分放到各自路由页面
-# 页面不一致如何解决: npm install ant-design-vue@next --save
-# 解决没有搜索框: <a-layout-header id="components-layout-demo-top-side-2" class="header"> 
-# 加 id: id="components-layout-demo-top-side-2"
+页面不一致如何解决: npm install ant-design-vue@next --save
+解决没有搜索框: <a-layout-header id="components-layout-demo-top-side-2" class="header"> 
+加 id: id="components-layout-demo-top-side-2"
 
 ###
 # 4-7 勾选 Amend commit 追加到上一次提交
@@ -40,4 +40,13 @@ npm install ant-design-vue@2.0.0-rc.3 --save
 ### 
 # 5-2 集成HTTP库Axios
 npm install axios@0.21.0 --save
+# 5-3 Vue3数据绑定显示列表数据
+响应式变量
+ref() 或者 reactive(), 整个项目尽量只用其中的一种, 便于维护
+# 5-4 电子书列表界面展示
+使用Ant Design Vue组件展示
+## 进入web --> 集成图标组件
+npm install @ant-design/icon-vue@5.1.8 --save
+# 5-5 Vue多环境配置, 增加dev和prod配置文件
+编译和启动增加多环境命令
 

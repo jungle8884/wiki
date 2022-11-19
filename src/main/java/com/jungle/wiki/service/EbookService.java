@@ -7,6 +7,7 @@ import com.jungle.wiki.req.EbookReq;
 import com.jungle.wiki.resp.EbookResp;
 import com.jungle.wiki.util.CopyUtil;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ObjectUtils;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -26,7 +27,9 @@ public class EbookService {
         // 相当于 查询条件 Where
         EbookExample ebookExample = new EbookExample();
         EbookExample.Criteria criteria = ebookExample.createCriteria();
-        criteria.andNameLike("%" + req.getName() + "%");
+        if (!ObjectUtils.isEmpty(req.getName())) {
+            criteria.andNameLike("%" + req.getName() + "%");
+        }
         List<Ebook> ebooksList = ebookMapper.selectByExample(ebookExample);
         return clazzConverter(ebooksList);
 

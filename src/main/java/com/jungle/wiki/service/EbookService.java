@@ -27,6 +27,7 @@ public class EbookService {
         // 相当于 查询条件 Where
         EbookExample ebookExample = new EbookExample();
         EbookExample.Criteria criteria = ebookExample.createCriteria();
+        // StringUtils.isEmpty 已废弃, 建议使用 ObjectUtils.isEmpty
         if (!ObjectUtils.isEmpty(req.getName())) {
             criteria.andNameLike("%" + req.getName() + "%");
         }

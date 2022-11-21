@@ -48,7 +48,8 @@ pre标签会保留空格, 原封不动的展示出来
 # 5-4 电子书列表界面展示
 使用Ant Design Vue组件展示
 ## 进入web --> 集成图标组件
-npm install @ant-design/icon-vue@5.1.8 --save
+npm install @ant-design/icons-vue --save
+npm install @ant-design/icons-vue@5.1.8 --save
 # 5-5 Vue多环境配置, 增加dev和prod配置文件
 编译和启动增加多环境命令
 

@@ -165,7 +165,7 @@ public class EbookExample {
         }
 
         public Criteria andNameIsNull() {
-            addCriterion("`category1Id` is null");
+            addCriterion("`name` is null");
             return (Criteria) this;
         }
 

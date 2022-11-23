@@ -99,7 +99,7 @@
       // 生命周期函数: 先输出setup, 再渲染页面, 再输出onMounted
       onMounted(() => {
         console.log("onMounted");
-        axios.get(process.env.VUE_APP_SERVER + "/ebook/list").then((response) => {
+        axios.get("/ebook/list").then((response) => {
           const data = response.data;
           ebooks.value = data.content;
           console.log(response);

@@ -93,16 +93,13 @@
   export default defineComponent({
     name: 'home',
     setup() {
-      console.log("setup");
       const ebooks = ref();
 
       // 生命周期函数: 先输出setup, 再渲染页面, 再输出onMounted
       onMounted(() => {
-        console.log("onMounted");
         axios.get("/ebook/list").then((response) => {
           const data = response.data;
           ebooks.value = data.content;
-          console.log(response);
         });
       });
 

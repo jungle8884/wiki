@@ -1,7 +1,7 @@
 package com.jungle.wiki.mapper;
 
-import com.jungle.wiki.entity.Ebook;
-import com.jungle.wiki.entity.EbookExample;
+import com.jungle.wiki.domain.Ebook;
+import com.jungle.wiki.domain.EbookExample;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

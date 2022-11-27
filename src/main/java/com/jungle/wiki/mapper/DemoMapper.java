@@ -1,7 +1,7 @@
 package com.jungle.wiki.mapper;
 
-import com.jungle.wiki.entity.Demo;
-import com.jungle.wiki.entity.DemoExample;
+import com.jungle.wiki.domain.Demo;
+import com.jungle.wiki.domain.DemoExample;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

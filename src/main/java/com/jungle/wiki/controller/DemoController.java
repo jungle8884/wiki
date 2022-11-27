@@ -1,6 +1,6 @@
 package com.jungle.wiki.controller;
 
-import com.jungle.wiki.entity.Demo;
+import com.jungle.wiki.domain.Demo;
 import com.jungle.wiki.service.DemoService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

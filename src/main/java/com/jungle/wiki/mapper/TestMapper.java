@@ -1,6 +1,6 @@
 package com.jungle.wiki.mapper;
 
-import com.jungle.wiki.entity.Test;
+import com.jungle.wiki.domain.Test;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

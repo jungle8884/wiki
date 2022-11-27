@@ -1,7 +1,7 @@
 package com.jungle.wiki.service;
 
-import com.jungle.wiki.entity.Ebook;
-import com.jungle.wiki.entity.EbookExample;
+import com.jungle.wiki.domain.Ebook;
+import com.jungle.wiki.domain.EbookExample;
 import com.jungle.wiki.mapper.EbookMapper;
 import com.jungle.wiki.req.EbookReq;
 import com.jungle.wiki.resp.EbookResp;

@@ -29,7 +29,7 @@
 
         <!-- entity类的位置 -->
         <javaModelGenerator targetProject="src\main\java"
-                            targetPackage="com.jungle.wiki.entity"/>
+                            targetPackage="com.jungle.wiki.domain"/>
 
         <!-- mapper xml的位置 -->
         <sqlMapGenerator targetProject="src\main\resources"

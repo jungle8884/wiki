@@ -1,7 +1,7 @@
 <template>
     <a-layout>
 
-      <a-layout-sider width="200" style="background: #fff">
+      <a-layout-sider width="200" style="background: #ffffff">
             <a-menu
               mode="inline"
               :style="{ height: '100%', borderRight: 0 }"

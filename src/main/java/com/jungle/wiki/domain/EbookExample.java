@@ -1,4 +1,4 @@
-package com.jungle.wiki.entity;
+package com.jungle.wiki.domain;
 
 import java.util.ArrayList;
 import java.util.List;

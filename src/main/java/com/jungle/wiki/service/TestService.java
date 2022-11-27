@@ -1,6 +1,6 @@
 package com.jungle.wiki.service;
 
-import com.jungle.wiki.entity.Test;
+import com.jungle.wiki.domain.Test;
 import com.jungle.wiki.mapper.TestMapper;
 import org.springframework.stereotype.Service;
 

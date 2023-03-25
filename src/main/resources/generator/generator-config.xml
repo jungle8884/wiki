@@ -27,7 +27,7 @@
                         password="666666">
         </jdbcConnection>
 
-        <!-- entity类的位置 -->
+        <!-- domain类的位置 -->
         <javaModelGenerator targetProject="src\main\java"
                             targetPackage="com.jungle.wiki.domain"/>
 

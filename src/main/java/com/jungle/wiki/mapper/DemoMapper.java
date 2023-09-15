@@ -2,12 +2,9 @@ package com.jungle.wiki.mapper;
 
 import com.jungle.wiki.domain.Demo;
 import com.jungle.wiki.domain.DemoExample;
-import org.apache.ibatis.annotations.Mapper;
+import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
-import java.util.List;
-
-@Mapper
 public interface DemoMapper {
     long countByExample(DemoExample example);
 

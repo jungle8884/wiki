@@ -4,7 +4,10 @@ import router from './router'
 import store from './store'
 import Antd from 'ant-design-vue';
 import 'ant-design-vue/dist/antd.css';
+
+// 一次性导入所有图标库 1
 import * as Icons from '@ant-design/icons-vue';
+
 import axios from 'axios';
 
 axios.defaults.baseURL = process.env.VUE_APP_SERVER;
@@ -30,12 +33,12 @@ const app = createApp(App);
 app.use(store)
     .use(router)
     .use(Antd)
-    .mount('#app');
+    .mount('#app'); // 一次性导入所有图标库 2 app
 
 // 全局使用图标
 const icons: any = Icons;
 for (const i in icons) {
-    app.component(i, icons[i]);
+    app.component(i, icons[i]); // 一次性导入所有图标库 3 app
 }
 
 console.log('环境: ', process.env.NODE_ENV);

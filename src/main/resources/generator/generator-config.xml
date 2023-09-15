@@ -40,13 +40,7 @@
                              targetPackage="com.jungle.wiki.mapper"
                              type="XMLMAPPER"/>
 
-<!--        <table tableName="test" />-->
-<!--        <table tableName="demo" />-->
-<!--        <table tableName="ebook"/>-->
-        <!--<table tableName="category"/>-->
-        <!--<table tableName="doc"/>-->
-        <!--<table tableName="content"/>-->
-        <table tableName="user"/>
-        <!--<table tableName="ebook_snapshot"/>-->
+<!--        <table tableName="demo" domainObjectName="Demo"/>-->
+<!--        <table tableName="ebook" domainObjectName="Ebook"/>-->
     </context>
 </generatorConfiguration>

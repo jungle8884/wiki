@@ -20,6 +20,7 @@
 </template>
 
 <script lang="ts">
+    // 自定义组件
     import { defineComponent } from 'vue';
 
     export default defineComponent({

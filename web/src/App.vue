@@ -12,14 +12,16 @@
 
 <script lang="ts">
     import { defineComponent } from 'vue';
+    // 引入自定义组件
     import TheHeader from '@/components/the-header.vue';
     import TheFooter from '@/components/the-footer.vue';
 
+    // 使用自定义组件
     export default defineComponent({
         name: 'app',
         components: {
             TheHeader,
-            TheFooter
+            TheFooter,
         },
     });
 </script>

@@ -48,19 +48,26 @@
       <a-layout-content
         :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
       >
+          <!--【数据绑定ebooks | ebooksReactive】 使用 Vue3 ref 实现数据绑定 4 |gutter: 20 间距20px| column 代表列数【column: 3 表示一行显示3列】-->
           <a-list item-layout="vertical" size="large" :grid="{ gutter: 20, column: 3 }" :data-source="ebooks">
+              <!-- item 表示ebooks数组中的某一个元素 -->
               <template #renderItem="{ item }">
+                  <!--电子书 名字【name】-->
                   <a-list-item key="item.name">
+                      <!--【图标】-->
                       <template #actions>
                           <span v-for="{ type, text } in actions" :key="type">
                             <component v-bind:is="type" style="margin-right: 8px" />
                             {{ text }}
                           </span>
                       </template>
+                      <!-- 描述【description】-->
                       <a-list-item-meta :description="item.description">
+                          <!-- 标题【title： 使用 图书名->name】-->
                           <template #title>
                               <a :href="item.href">{{ item.name }}</a>
                           </template>
+                          <!-- 图标【cover：数据库ebook表中对应字段cover】-->
                           <template #avatar><a-avatar :src="item.cover"/></template>
                       </a-list-item-meta>
                   </a-list-item>
@@ -92,19 +99,27 @@
 
   export default defineComponent({
     name: 'home',
+      // Vue3新增的初始化方法【替代了Vue2的data()、mounted()、methods()】
     setup() {
-      const ebooks = ref();
+      console.log("setup");
 
-      // 生命周期函数: 先输出setup, 再渲染页面, 再输出onMounted
+      const ebooks = ref(); // 使用 Vue3 ref 实现数据绑定 1
+      // const ebooksReactive = reactive({books: []});
+
+        // 【一般是初始化工作】生命周期函数: 先输出setup, 再渲染页面, 再输出onMounted
       onMounted(() => {
+        console.log("onMounted");
+            // get获取数据 then回调函数
         axios.get("/ebook/list").then((response) => {
-          const data = response.data;
+          const data = response.data; // 使用 Vue3 ref 实现数据绑定 2
           ebooks.value = data.content;
+          // ebooksReactive.books = data.content;
         });
       });
 
       return {
-        ebooks,
+        ebooks, // 使用 Vue3 ref 实现数据绑定 3 【return ebooks 后 页面就可以拿到数据了】
+          // ebooksReactive: toRef(ebooksReactive, "books"),
         listData,
         pagination: {
             onChange: (page: any) => {

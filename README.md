@@ -20,6 +20,9 @@ npm install ant-design-vue@next --save
 # 版本保持一致
 npm install ant-design-vue@2.0.0-rc.3 --save
 # 文件回退: 选中文件 --> 鼠标右键 --> revert
+# 集成第三方组件一般都在main.ts里加配置
+# import Antd from 'ant-design-vue';
+# import 'ant-design-vue/dist/antd.css';
 
 ###
 # 4-6 将布局放到App.vue, 将各页面变化的部分放到各自路由页面

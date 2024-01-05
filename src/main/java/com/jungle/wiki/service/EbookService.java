@@ -32,24 +32,27 @@ public class EbookService {
             criteria.andNameLike("%" + req.getName() + "%");
         }
         List<Ebook> ebooksList = ebookMapper.selectByExample(ebookExample);
+
+        // 返回 EbookResp的列表，EbookResp只包含了ebook的部分数据
         return clazzConverter(ebooksList);
 
     }
 
     /**
      * 类转换器
+     * 数据返回时不一定全部返回，这个时候需要根据需要返回部分数据。
      * */
     private List<EbookResp> clazzConverter(List<Ebook> ebooksList) {
          /*List<EbookResp> res = new ArrayList<>();
          for (Ebook ebook : ebooksList) {
              //EbookResp ebookResp = new EbookResp();
              //BeanUtils.copyProperties(ebook, ebookResp);
-             // 对象复制
+             // 对象复制 source: ebook -> destination: EbookResp
              EbookResp ebookResp = CopyUtil.copy(ebook, EbookResp.class);
              res.add(ebookResp);
          }
          return res;*/
-        // 列表复制
+        /* 列表复制*/
         return CopyUtil.copyList(ebooksList, EbookResp.class);
     }
 

@@ -21,7 +21,7 @@ public class EbookController {
 
 
     @GetMapping("/list")
-    public CommonResp<List<EbookResp>> list(EbookReq req) {
+    public CommonResp<List<EbookResp>> list(EbookReq req) { //将请求参数封装成一个类
         CommonResp<List<EbookResp>> resp = new CommonResp<>();
         List<EbookResp> list = ebookService.getList(req);
         resp.setContent(list);
